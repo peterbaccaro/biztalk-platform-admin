@@ -1,0 +1,270 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6045768D-092E-4C6D-84E1-8B8C61F92256}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BTSPlatformAdmin</RootNamespace>
+    <AssemblyName>BTSPlatformAdmin</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>BTSPlatformAdmin5.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design">
+      <HintPath>..\..\..\Windows\Microsoft.NET\Framework\v2.0.50727\System.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.DirectoryServices.AccountManagement" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="About.designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BTSPlatformAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BTSPlatformAdmin.Designer.cs">
+      <DependentUpon>BTSPlatformAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ComparePlatformSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ComparePlatformSettings.Designer.cs">
+      <DependentUpon>ComparePlatformSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExportPlatformSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExportPlatformSettings.Designer.cs">
+      <DependentUpon>ExportPlatformSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExtendedControls\DataGridViewPasswordTextBoxCell.cs" />
+    <Compile Include="ExtendedControls\DataGridViewPasswordTextBoxColumn.cs" />
+    <Compile Include="Helpers\DirectoryServices.cs" />
+    <Compile Include="ImportPlatformSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportPlatformSettings.Designer.cs">
+      <DependentUpon>ImportPlatformSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Helpers\Serialization.cs" />
+    <Compile Include="RemovePlatformSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RemovePlatformSettings.Designer.cs">
+      <DependentUpon>RemovePlatformSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StringExtensions.cs" />
+    <Compile Include="Wizard\Header.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Wizard\HeaderDesigner.cs" />
+    <Compile Include="Wizard\InfoContainer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Wizard\InfoContainerDesigner.cs" />
+    <Compile Include="Wizard\InfoPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Wizard\InfoPageDesigner.cs" />
+    <Compile Include="Wizard\PageCollection.cs" />
+    <Compile Include="Wizard\PageEventHandler.cs" />
+    <Compile Include="Wizard\Wizard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Wizard\WizardDesigner.cs" />
+    <Compile Include="Wizard\WizardPage.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Wizard\WizardPageDesigner.cs" />
+    <EmbeddedResource Include="About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BTSPlatformAdmin.resx">
+      <DependentUpon>BTSPlatformAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComparePlatformSettings.resx">
+      <DependentUpon>ComparePlatformSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExportPlatformSettings.resx">
+      <DependentUpon>ExportPlatformSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportPlatformSettings.resx">
+      <DependentUpon>ImportPlatformSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="RemovePlatformSettings.resx">
+      <DependentUpon>RemovePlatformSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizard\Header.resx">
+      <DependentUpon>Header.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizard\InfoContainer.resx">
+      <DependentUpon>InfoContainer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizard\InfoPage.resx">
+      <DependentUpon>InfoPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizard\Wizard.resx">
+      <DependentUpon>Wizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizard\WizardPage.resx">
+      <DependentUpon>WizardPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BizTalk.Administration\BizTalk.Administration.csproj">
+      <Project>{A3A7E8C8-A3B2-4D94-A3FA-80F4E7DF8222}</Project>
+      <Name>BizTalk.Administration</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="BTSPlatformAdmin5.ico" />
+    <Content Include="Images\BTSPlatformAdmin1.ico" />
+    <Content Include="Images\BTSPlatformAdmin2.ico" />
+    <Content Include="Images\BTSPlatformAdmin3.ico" />
+    <Content Include="Images\BTSPlatformAdmin5.ico" />
+    <Content Include="Images\GridAdapter.jpg" />
+    <Content Include="Images\GridAdapterHandler.jpg" />
+    <Content Include="Images\GridAdapterHandlerDefault.jpg" />
+    <Content Include="Images\GridError.png" />
+    <Content Include="Images\GridHost.jpg" />
+    <Content Include="Images\GridHostDefault.jpg" />
+    <Content Include="Images\GridHostInstance.jpg" />
+    <Content Include="Images\GridSuccess.png" />
+    <Content Include="Images\MenuAbout.png" />
+    <Content Include="Images\MenuCompare.png" />
+    <Content Include="Images\MenuExport.png" />
+    <Content Include="Images\MenuImport.png" />
+    <Content Include="Images\MenuRefresh.png" />
+    <Content Include="Images\MenuRemove.png" />
+    <Content Include="Images\MenuSettings.png" />
+    <Content Include="Images\NTGroup.jpg" />
+    <Content Include="Images\NTUser.jpg" />
+    <Content Include="Images\TitleAdapter.jpg" />
+    <Content Include="Images\TitleAdapters.jpg" />
+    <Content Include="Images\TitleCompare.jpg" />
+    <Content Include="Images\TitleHostInstances.jpg" />
+    <Content Include="Images\TitleHosts.jpg" />
+    <Content Include="Images\TitlePlatformSettings.jpg" />
+    <Content Include="Images\TreeAdapter.jpg" />
+    <Content Include="Images\TreeAdapters.jpg" />
+    <Content Include="Images\TreeBizTalkAdmin.jpg" />
+    <Content Include="Images\TreeBizTalkGroup.jpg" />
+    <Content Include="Images\TreeHostInstance.jpg" />
+    <Content Include="Images\TreeHosts.jpg" />
+    <Content Include="Images\TreePlatformSettings.jpg" />
+    <Content Include="Images\TreeRoot.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
