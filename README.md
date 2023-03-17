@@ -14,3 +14,13 @@ Features:
 - Suppport for %MachineName% macro in the host Windows Group 
   name field and host instance Server Name and Logon fields to simplify 
   platform setting migration when local accounts are used.
+
+## Getting Started
+
+- Open the solution `BTSPlatformAdmin.sln` in Visual Studio.
+- Ensure that the `BTSPlatformAdmin` is set as the startup project.
+- Run the application.
+
+## License
+
+Apache License 2.0
